@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Election Results</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<header class="text-gray-600 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+        <!-- <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+</svg> -->
+        <img src="https://eci.gov.in/uploads/monthly_2021_09/logo.png.829b3416fb87a2de458726dbefb72fd7.png" alt="GeeksforGeeks logo" width="400" height="150"> <span class="ml-3 text-xl" font-size:140px><h1 style="color:black;font-size:40px;"></h1>  </span>
+        </a>
+        <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+            <!-- <a class="mr-5 hover:text-gray-900">First Link</a>
+          <a class="mr-5 hover:text-gray-900">Second Link</a>
+          <a class="mr-5 hover:text-gray-900">Third Link</a>
+          <a class="mr-5 hover:text-gray-900">Fourth Link</a> -->
+        </nav>
+        <!-- <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"> -->
+        <!-- <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24"> -->
+        <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+        </button>
+    </div>
+</header>
+<header>
+    <!-- <img src="https://media1.giphy.com/media/1gRuNh69AAkyqq3I4h/giphy.gif?cid=790b7611c30b8f8535336c35154a280d5605111e483f7a19&rid=giphy.gif&ct=g" alt="this slowpoke moves" width="250" /> -->
+    <!-- Background image -->
+    <center><img src="https://cloudfront.penguin.co.in/wp-content/uploads/2019/05/Election_Header.jpg" alt="GeeksforGeeks logo" width="500" height="500">
+        <!-- <div class="p-5 text-center bg-image" style="
+          background-image: url('https://cloudfront.penguin.co.in/wp-content/uploads/2019/05/Election_Header.jpg');
+          width:100; height: 400px;
+        "> -->
+        <!-- <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <div class="text-white">
+                    <h1 class="mb-3">Heading</h1>
+                    <h4 class="mb-3">Subheading</h4>
+                    <a class="btn btn-outline-light btn-lg" href="#!" role="button">Call to action</a
+          >
+        </div>
+      </div>
+    </div> -->
+        </div>
+        <!-- Background image -->
+</header>
+
+<body>
+
+
+    <div class="container" style="width: 650px;">
+        <!-- <div class="row"> -->
+        <!-- <div class="col-lg-12"> -->
+        <!-- <img src="https://cdn.downtoearth.org.in/dte/userfiles/images/0000028862-logos.jpg" alt="GeeksforGeeks logo" width="300" height="300"> -->
+        <h1 class="text-center" style="color:black;font-size:30px;">=== VOTE HERE ===</h1>
+        <hr/>
+        <br/>
+        <div id="loader">
+            <p class="text-center">Wait....</p>
+        </div>
+        <div id="content" style="display: none;">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name of the Candidates</th>
+                        <th scope="col">Vote count</th>
+                    </tr>
+                </thead>
+                <tbody id="candidatesResults">
+                </tbody>
+            </table>
+            <hr/>
+            <form onSubmit="App.castVote(); return false;">
+                <div class="form-group">
+                    <label for="candidatesSelect">Vote for =></label>
+                    <select class="form-control" id="candidatesSelect">
+                </select>
+                </div>
+                <center><button type="submit" class="btn btn-primary">Vote</button>
+                    <hr />
+            </form>
+            <p id="accountAddress" class="text-center"></p>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
