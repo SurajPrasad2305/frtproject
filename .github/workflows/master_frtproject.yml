@@ -24,9 +24,6 @@ jobs:
       - name: npm install, build, and test
         run: |
           npm install
-          npm install -g truffle
-          truffle migrate --reset
-          npm run dev 
       
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
